@@ -1,7 +1,6 @@
-version: '3.8'
 
 services:
-  # 1. Web Application Service (Frontend + Application Logic)
+  # 1. Web Application
   web:
     build: .
     ports:
@@ -9,30 +8,30 @@ services:
     volumes:
       - .:/var/www/html
     environment:
-      - DB_HOST=db
-      - DB_NAME=contact_db
-      - DB_USER=root
-      - DB_PASSWORD=secret_pass
+      DB_HOST: db
+      DB_NAME: contact_db
+      DB_USER: root
+      DB_PASSWORD: secret_pass
     depends_on:
       - db
 
-  # 2. Relational Database Service (Data Storage Tier)
+  # 2. MySQL Database
   db:
     image: mysql:8.0
     ports:
       - "3306:3306"
     environment:
-      - MYSQL_ROOT_PASSWORD=secret_pass
-      - MYSQL_DATABASE=contact_db
+      MYSQL_ROOT_PASSWORD: secret_pass
+      MYSQL_DATABASE: contact_db
     volumes:
       - db_data:/var/lib/mysql
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
 
-  # 3. Mailpit Email Mock Service (For Task A: Forgot Password Link)
+  # 3. Mailpit Email Testing Service
   mail:
     image: axllent/mailpit
     ports:
       - "8025:8025"
-
+      - "1025:1025"
 volumes:
   db_data:

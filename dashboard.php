@@ -54,13 +54,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Distributed System Demo - Dashboard</title>
     <style>
         body { font-family: Arial, sans-serif; background-color: #f4f4f9; padding: 40px; margin: 0; }
-        .container { max-width: 600px; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin: 0 auto; }
+        .container { max-width: 600px; background: white; padding: 30px; 
+        border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin: 0 auto; }
         h2 { margin-top: 0; color: #333; }
         .form-group { margin-bottom: 15px; }
         label { display: block; margin-bottom: 5px; color: #666; font-weight: bold; }
-        input[type="text"], input[type="email"], textarea { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; }
+        input[type="text"], input[type="email"], textarea { width: 100%; padding: 10px; border: 1px solid #ddd;
+         border-radius: 4px; box-sizing: border-box; }
         textarea { height: 80px; resize: vertical; }
-        .btn { padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; margin-right: 10px; text-decoration: none; display: inline-block; }
+        .btn { padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; 
+        margin-right: 10px; text-decoration: none; display: inline-block; }
         .btn-primary { background-color: #28a745; color: white; }
         .btn-primary:hover { background-color: #218838; }
         .btn-secondary { background-color: #0056b3; color: white; }

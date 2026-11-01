@@ -46,13 +46,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <title>Distributed System Demo - Register Account</title>
     <style>
-        body { font-family: Arial, sans-serif; background-color: #f4f4f9; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        body { font-family: Arial, sans-serif; background-color: #f4f4f9; display: flex; justify-content: center; align-items: center;
+         height: 100vh; margin: 0; }
         .card { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); width: 320px; }
         h2 { margin-top: 0; color: #333; text-align: center; }
         .form-group { margin-bottom: 15px; }
         label { display: block; margin-bottom: 5px; color: #666; }
-        input[type="text"], input[type="email"], input[type="password"] { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; }
-        button { width: 100%; padding: 10px; background-color: #28a745; border: none; color: white; border-radius: 4px; cursor: pointer; font-size: 16px; margin-top: 10px; }
+        input[type="text"], input[type="email"], input[type="password"] { width: 100%; padding: 10px; border: 1px solid #ddd;
+         border-radius: 4px; box-sizing: border-box; }
+        button { width: 100%; padding: 10px; background-color: #28a745; border: none; color: white;
+         border-radius: 4px; cursor: pointer; font-size: 16px; margin-top: 10px; }
         button:hover { background-color: #218838; }
         .alert { padding: 10px; border-radius: 4px; margin-bottom: 15px; font-size: 14px; text-align: center; }
         .alert-success { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
